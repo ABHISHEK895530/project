@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: Arial, Helvetica, sans-serif;
+
+    }
+
+    .btns .btn {
+      padding: 8px 16px;
+      background-color: rgb(255, 166, 0);
+      color: rgb(255, 255, 255);
+      border-radius: 15px;
+      font-size: 1rem;
+      border: none;
+      text-transform: uppercase;
+
+    }
+
+    .btns .btn:hover {
+      background-color: rgb(99, 99, 99);
+      /* color: orange; */
+    }
+
+    #gender {
+      height: fit-content;
+    }
+    #gender2{
+      display: flex; 	
+      width: 100%;
+    }
+    #gender2 div{
+      width: 50%;
+      text-align: center;
+      margin-top: 20px;
+    }
+
+    #gender input {
+      accent-color: rgba(22, 5, 255, 0.773);
+    }
+
+    body {
+      background-color: rgba(255, 168, 5, 0.773);
+     
+
+    }
+    .backimg{
+      width: 95%;
+      height: 250px;
+      background-image: url(./pexels-mikhail-nilov-7988081.jpg);
+      background-size: cover;
+      background-position: center;
+      /* object-fit: cover; */
+      margin: auto;
+    
+    }
+
+    label {
+      text-transform: capitalize;
+      font-size: 1.5rem;
+    }
+    input::placeholder{
+      font-size: 1rem;
+    }
+
+    input {
+      border: none;
+      display: block;
+      border-bottom: 2px solid orange;
+      width: 100%;
+      margin-top: 15px;
+      text-transform: capitalize;
+      outline: none;
+    }
+
+    .Unversal-div {
+      width: 40%;
+      height: 120px;
+      margin: 10px auto;
+      flex-wrap: wrap;
+  
+    
+     
+      background-color: rgb(255, 255, 255);
+      /* margin: 10px; */
+      border-radius: 8px;
+      padding: 20px;
+    }
+
+    form {
+      width: 100%;
+      height:fit-content;
+      display: flex;
+      flex-wrap: wrap;
+
+    }
+
+    img {
+      width: 100%;
+      height: 200px;
+      object-fit: cover;
+    
+
+     
+  
+    }
+
+    hr{
+      margin-top: 0px;height: 3px;background-color: rgb(255, 0, 0);width: 0px;margin: auto;opacity: 0;
+      transition: all 0.5s;
+    }
+
+    .inp:focus{
+      border: none;
+    
+    }
+    
+
+
+    .inp:focus + hr{
+      opacity: 1;
+      width: 100%;
+    }
+    .btns{
+      width: 100%;
+      display: flex;
+      justify-content: space-evenly;
+      margin-bottom: 50px;
+    }
+    span{
+      font-size: 1.5rem;
+
+    }
+  </style>
+</head>
+
+<body>
+  <div class="backimg">
+
+  </div>
+
+  <!-- <img src="./pexels-mikhail-nilov-7988081.jpg" alt=""> -->
+
+
+  <form action="./success_yellow_400x400.gif" autocomplete="on">
+    <div  class="Unversal-div">
+      <label for="">city pin code</label>
+      <input type="text" placeholder="pin" required class="inp" id="pin">
+
+      <hr>
+    </div>
+
+    <div class="Unversal-div">
+      <label for="">fullname</label>
+      <input type="text" placeholder="name" maxlength="15" required class="inp" id="name">
+      <hr>
+
+    </div>
+
+    <div class="Unversal-div">
+      <label for="">contact</label>
+      <span>📱</span><input type="number" placeholder="phone number" maxlength="10" required class="inp" id="contact">
+      <hr>
+
+    </div>
+
+    <div class="Unversal-div">
+      <label for="">email</label>
+      <span>📩</span><input type="email" placeholder="your email" required class="inp" id="email">
+      <hr>
+
+    </div>
+    <div class="Unversal-div">
+
+      <span>resums📃</span><input type="file" required>
+    </div>
+
+    <div id="gender" class="Unversal-div">
+
+      <!-- <label for="">(optional)</label><br> -->
+      <h3>(optional)</h3>
+      <div id="gender2">
+      <div>
+        <label for="male">👦male</label>
+        <input type="radio" name="gender" id="male">
+      </div>
+
+      <div>
+        <label for="female"> 👧female </label>
+        <input type="radio" name="gender" id="female">
+      </div>
+    </div>
+    </div>
+
+    <div class="Unversal-div">
+      <label for="">qualification🎓</label>
+   <input type="text" placeholder="education" required class="inp" id="qualification">
+      <hr>
+
+    </div>
+
+    <div class="Unversal-div">
+      <h3>skills</h3>
+      <select name="" id="technology" required>
+      
+          <option value="">web design</option>
+          <option value="">front end developer</option>
+          <option value="">back end developer</option>
+          <option value="">digitalmarketing</option>
+          <option value="">full stake</option>
+      </select>
+     
+    </div>
+    <div class="btns">
+      <button type="submit" class="btn">submit</button>
+      <button type="reset" class="btn">clear form</button>
+    </div>
+
+
+   
+  </form>
+
+
+  <script>
+    let pin = document.getElementById('pin')
+    let name = document.getElementById('name')
+    let contact = document.getElementById('contact')
+    let email = document.getElementById('email')
+    let qualification = document.getElementById('qualification')
+    let technology = document.getElementById('technology')
+
+   
+    
+
+    let form = document.querySelector('form').addEventListener('submit',()=>{
+
+      
+
+      let userdata = {
+        citypincode:pin.value,
+        name:name.value,
+        contact:contact.value,
+        email:email.value,
+        qualification:qualification.value,
+        technology:technology.value,
+
+
+      }
+      console.log(userdata);
+      localStorage.setItem(email.value,JSON.stringify(userdata));
+      let data = localStorage.getItem(userdata);
+      let getdata = JSON.parse(data)
+      console.log(getdata);
+      
+      
+      
+
+      
+      
+      
+
+
+    })
+    
+    
+   
+
+  </script>
+
+
+
+
+</body>
+
+</htm
