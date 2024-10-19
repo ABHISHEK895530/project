@@ -1,0 +1,48 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+body{
+    background-color: rgb(76, 158, 76);
+
+}
+.allbtn button{
+    font-size: 50px;
+    height: 70px;
+    text-align: center;
+    background-color: rgb(49, 159, 218);
+    color: #fff;
+   border-color: #2b7ed1;
+}
+.allbtn{
+    width: 50%;
+    margin:10px auto;
+    display: grid;
+    grid-template-columns: repeat(3,1fr );
+
+}
+.h1-hide{
+    
+    visibility: hidden;
+  
+}
+h2{
+    text-align: center;
+    color:brown;
+}
+.reset{
+   width: fit-content;
+    margin: auto;
+}
+#reset-btn{
+    background-color: rgb(5, 13, 242);
+    color: #fff;
+    padding: 8px 16px;
+    border: none;
+    border-radius: 10px;
+    text-align: center;
+}
+#reset-btn:hover{
+    background-color: rgb(71, 73, 156);
+}
