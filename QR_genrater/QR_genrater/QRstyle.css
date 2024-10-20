@@ -1,0 +1,32 @@
+.center{
+    width: 50%;
+    margin:10px auto;
+    display: flex;
+    gap: 10px;
+    flex-direction: column;
+    flex-wrap: wrap;
+}
+.center button{
+    width: fit-content;
+    background-color: brown;
+    color:white;
+    border: none;
+    padding: 8px 16px;
+    border-radius: 10px;
+}
+.center a{
+    background-color: brown;
+    color: white;
+    text-decoration: none;
+    padding: 4px 8PX;
+    font-size: 0.8rem;
+    /* text-transform: uppercase; */
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    border: 10px;
+    width: fit-content;
+    border-radius: 10PX;
+    
+}
+body{
+    background-color: aliceblue;
+}

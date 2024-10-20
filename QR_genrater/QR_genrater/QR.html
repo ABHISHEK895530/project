@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <!-- link css in html page -->
+    <link rel="stylesheet" href="./QRstyle.css">
+    
+</head>
+<body>
+
+    <div class="center">
+    <h1>QR Gnrater</h1>
+
+    <input type="text" placeholder="Enter text to Genrater QR"> <!---QR input filed-->
+    <button onclick="QRgenrater()">Genrater QR</button> <!---genret button-->
+    <div id="qrdow"></div>                      
+    <a href="" id="download-link" download="qrdow.png" style="display: none;">download QR</a><!----QR downlode link-->
+
+    </div>
+    <script>
+        function QRgenrater() {
+            let QR = document.querySelector('#qrdow');        
+            QR.innerHTML = ""
+            let input = document.querySelector('input').value;
+            new QRCode(QR,{
+                text:input,
+                width:150,
+                height:150,
+                correctLevel: QRCode.CorrectLevel.H // High error correction level
+            })
+
+            
+                 // Wait a bit for the QR code to be rendered
+      setTimeout(() => {
+        // Get the QR code as an image (base64 data URL)
+        const qrCodeCanvas = QR.querySelector('canvas');
+        if (qrCodeCanvas) {
+          const qrCodeDataURL = qrCodeCanvas.toDataURL("image/png");
+
+          // Set the download link
+          const downloadLink = document.getElementById('download-link');
+          downloadLink.href = qrCodeDataURL;
+          downloadLink.style.display = "inline-block";
+        }
+      }, 100); // Allow some time for the QR code to render
+    
+
+
+
+
+
+            
+              }
+
+              
+              
+              </script>
+              <script src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js"></script>
+</body>
+</html>
