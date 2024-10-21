@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BR architects</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="br.css">
+</head>
+
+<body>
+    
+    </div>
+    <!--nav-section-->
+    <header>
+        <div class="nav1">
+            <a href="#"><b>BR</b> architects</a>
+        </div>
+        <div class="menuicon">
+        <i class="fa-solid fa-bars"></i>
+        </div>
+        <div class="nav2">
+            <!-- <a href="#home">home</a> -->
+            <a href="#project">projects</a>
+            <a href="#about">about</a>
+            <a href="#contact">contact</a>
+            
+
+        </div>
+    </header>
+    <!--backgroud img-section-->
+    <div class="back-img" id="home">
+
+        <h1><span>BR</span>Architects</h1>
+    </div>
+
+    </div>
+    <!--project section-->
+    <div class="hr" id="project">
+        <h1>projects</h1>
+        <hr>
+        <div class="img-section">
+            <div class="img1">
+                <img src="./house1.jpg" alt="">
+                <h3>Summer House</h3>
+
+            </div>
+            <div class="img2">
+                <img src="./house2.jpg" alt="">
+                <h3>brik House</h3>
+            </div>
+            <div class="img3">
+                <img src="./house3.jpg" alt="">
+                <h3>brik House</h3>
+            </div>
+            <div class="img4">
+                <img src="./house4.jpg" alt="">
+                <h3>brik House</h3>
+            </div>
+            <div class="img5">
+                <img src="./house2 (1).jpg" alt="">
+                <h3>Summer House</h3>
+            </div>
+            <div class="img6">
+                <img src="./house2(2).jpg" alt="">
+                <h3>brik House</h3>
+            </div>
+            <div class="img7">
+                <img src="./house2(3).jpg" alt="">
+                <h3>brik House</h3>
+            </div>
+            <div class="img8">
+                <img src="./house2 (4).jpg" alt="">
+                <h3>brik House</h3>
+            </div>
+
+        </div>
+
+    </div>
+    <!-- about section -->
+    <div class="about-section" id="about">
+        <div class="about">
+            <h1> About</h1>
+            <hr>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Temporibus adipisci inventore maiores, facilis
+                non esse sequi. At dignissimos, repudiandae explicabo similique culpa quae doloremque rem sunt voluptas
+                deleniti non nisi!
+                </p>
+        </div>
+        <div class="contact">
+            <div class="contact-img">
+                <img src="./team1.jpg" alt="">
+                <h2 class="h2">vishal</h2>
+                <p class="p">CEO & Founder</p>
+                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nemo doloribus, magni quae laudantium
+                    eveniet neque.</p>
+                <button type="submit">contact</button>
+            </div>
+
+            <div class="contact-img">
+                <img src="./team2.jpg" alt="">
+                <h2 class="h2">riya</h2>
+                <p class="p">Architect</p>
+                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nemo doloribus, magni quae laudantium
+                    eveniet neque.</p>
+                <button type="submit">contact</button>
+
+            </div>
+
+
+            <div class="contact-img">
+                <img src="./team3.jpg" alt="">
+                <h2 class="h2">aadi</h2>
+                <p class="p">Architect</p>
+                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nemo doloribus, magni quae laudantium
+                    eveniet neque.</p>
+                <button type="submit">contact</button>
+            </div>
+
+
+            <div class="contact-img">
+                <img src="./team4.jpg" alt="">
+                <h2 class="h2">hitash</h2>
+                <p class="p">Architect</p>
+                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nemo doloribus, magni quae laudantium
+                    eveniet neque.</p>
+                <button type="submit">contact</button>
+
+            </div>
+        </div>
+    </div>
+    <!-- contact section -->
+    <div class="contact-section" id="contact">
+        <h2>contact</h2>
+        <hr>
+        <p>Lets get in touch and talk about your next project. </p>
+        <form action="#">
+            <input type="text" placeholder="FullName"><br>
+            <input type="email" placeholder="Email"><br>
+            <input type="number" placeholder="Phone NO"><br>
+            <input type="tel" placeholder="Address"><br>
+            <button type="submit">send message</button>
+
+        </form>
+        <!-- <img src="./" alt=""> -->
+    </div>
+    <!-- footer-section -->
+    <footer>
+        <p>powered by <u>w3.css</u></p>
+    </footer>
+
+
+
+</body>
+<script>
+    let icon =document.querySelector('.fa-bars');
+    let links = document.querySelector(".nav2");
+    let divchild = links.querySelectorAll('a');
+    console.log(divchild);
+    
+    
+
+    icon.addEventListener('click', ()=>{
+        icon.classList.toggle('fa-x')
+        links.classList.toggle('hiii')
+        if (links.style.display == 'flex') {
+            links.style.display ='none'
+           
+        }
+        
+
+         else {
+            links.style.display = 'flex'
+        }
+    })
+    divchild.forEach(element => {
+        // console.log(links);
+        console.log(window.screenX);
+        
+        
+        element.addEventListener('click',() =>{
+
+        if(links.classList.contains('hiii'))
+{
+            links.style.display = 'none';
+            icon.classList.remove('fa-x')
+            
+            links.classList.remove('hiii')
+}           
+        })
+        
+    });
+
+</script>
+
+</html>
